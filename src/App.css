@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+html,
+body {
+  margin: auto 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background-color: white;
+  border: outset 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: rgb(243, 217, 217);
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+button:active {
+  border: inset 0.5px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc-container {
+  margin: 100px auto;
+  border-radius: 15px;
+  width: 210px;
+  padding: 10px;
+  border: outset rgb(74, 140, 194) 4px;
+  background: radial-gradient(rgb(170, 208, 240), steelblue);
+  box-shadow: 7px 7px 10px rgb(165, 169, 197);
+}
+
+.calc-items {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.num-box {
+  display: grid;
+  width: 200px;
+  margin-top: 10px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.op-box {
+  display: grid;
+  width: 200px;
+  margin-top: 10px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.result {
+  width: 220px;
+  background-color: white;
+  border: 2px;
+  text-align: center;
 }
